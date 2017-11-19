@@ -7,10 +7,11 @@
     <body>
         <?php
         include 'connect.php';
-        session_start();
+        $conn = connectionDB();
+
         ?>
 
-        <h2>Login SQL Weekpdracht inlog</h2>
+        <h2>Login SQL Weekopdracht inlog</h2>
 
         <form method="POST">
 
@@ -21,7 +22,8 @@
                 <label><b>Wachtwoord</b></label>
                 <input type="password" placeholder="Voer Wachtwoord in" name="pass" required>
                 <br>
-                <button type="submit" width="75px" onclick="inloggen()">Inloggen</button>
+<!--                <button type="submit" width="75px" onclick="inloggen()">Inloggen</button>-->
+                <button type="submit" width="75px">Inloggen</button>
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
@@ -29,6 +31,7 @@
             </div>
         </form>
 <?php
+    inloggen();
 //    $naam = $_REQUEST['user'];
 //    $wachtwoord = $_REQUEST['pass'];
 //    echo "$naam";

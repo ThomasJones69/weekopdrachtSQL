@@ -1,26 +1,22 @@
 <?php
 
 function connectionDB() {
-
     $hostname = 'localhost';            
-    $databasenaam = 'user-accounts';
+    $databasenaam = 'weekopdracht_sql';
     $username = 'root';
     $password = '';
-
+   
     $conn = new mysqli($hostname, $username, $password, $databasenaam); 
-    if ($conn->connect_error) die($conn->connect_error);
     return $conn;  
 }
 
 function inloggen(){
     $naam = $_REQUEST['user'];
     $wachtwoord = $_REQUEST['pass'];
-    echo "$naam";
-    echo "$wachtwoord";
     
-    $encrypt = crypt($wachtwoord, $salt);
+//    $encrypt = crypt($wachtwoord, $salt);
     
-    $sql = "SELECT * FROM `user-accounts` WHERE `username` = '$naam' AND `password` = '$password'";
+    $sql = "SELECT * FROM `user-accounts` WHERE `username` = '$naam' AND `password` = '$wachtwoord'";
     echo $sql;
 //        $result = mysqli_query($connectie, $sql);
 //        $result = mysqli_query($sql);
