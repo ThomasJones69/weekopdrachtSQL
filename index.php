@@ -2,6 +2,8 @@
     <head>
         <meta charset="UTF-8">
         <link rel = "stylesheet" type = "text/css" href="layout.css"> 
+        <script src="function.js">
+        </script>
         <title></title>
     </head>
     <body>
@@ -26,7 +28,8 @@
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <button type="button" class="aktieknop">Account aanmaken</button>
+                <!--<button type="button" class="aktieknop" onclick = "register()">Account aanmaken</button>-->
+                <button type="button" class="aktieknop" <html><a href = "register.php">Account aanmaken</a></html></button>
             </div>
         </form>
         <?php
