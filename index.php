@@ -8,6 +8,7 @@
         <?php
         include 'connect.php';
         $conn = connectionDB();
+        error_reporting(0);
         ?>
 
         <h2>Login SQL Weekopdracht inlog</h2>
@@ -21,12 +22,11 @@
                 <label><b>Wachtwoord</b></label>
                 <input type="password" placeholder="Voer Wachtwoord in" name="pass" required>
                 <br>
-                <!--                <button type="submit" width="75px" onclick="inloggen()">Inloggen</button>-->
-                <button type="submit" width="75px">Inloggen</button>
+                <button type="submit" >Inloggen</button>
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <button type="button" class="annuleerknop">Annuleren</button>
+                <button type="button" class="aktieknop">Account aanmaken</button>
             </div>
         </form>
         <?php

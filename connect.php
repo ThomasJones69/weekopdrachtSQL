@@ -18,7 +18,16 @@ function inloggen($conn) {
     $result = $conn->query($sql);
     if ($result->num_rows == 0) {
         echo "<b>" . "Geen account met die gegevens!" . "</b>";
+        echo "<br>";
+        $noAccount = "no";
+        if ($noAccount == "no"){
+            echo "Wilt u een account aanmaken?";
+            
+        }
+        
     } else {
+        echo "Welkom "."$naam"."."."Je bent succesvol ingelogt";
+        sleep(5);
         header("Location: te-lezen-file.php");
     }
 }
